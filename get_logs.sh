@@ -6,5 +6,6 @@ cat logs/*.log  | awk '{print $3}' | sed -e 's/\:.*$//g' | sort | uniq > ips.uni
 
 NUM_IPS=`wc -l ips.uniq`
 
+echo ""
 echo "wrote ${NUM_IPS} ips to ${CWD}/ips.uniq"
 
